@@ -52,8 +52,19 @@ Para las constantes tenemos la palbra reservada `keyword`-`const`
 - `const` Usar cuándo el valor será el mismo siempre.
   `let` y`var` ambos nos permite crear variables su única diferecia es el alcance, ámbito o `scope`.
 ## 3. Operadores
-## 4. Funciones
-## 5. Métodos para trabajar con datos estructurados:
+Su clasificación general se divide en 3:
+   1. Operadores unarios:
+   Los operadores unarios son aquello que se ubican a la izquierda del valor y que dan como resultado un nuevo valor.
+   2. operadores binarios:
+    Los operadores binarios son aquellos que están en medio de dos valores y que retornan un único valor.
+   - Operadores Aritméticos
+   - Operadores de comparación 
+   - Operadores lógicos
+   1. Operadores ternarios:
+   LOs operadores terciarios son aquellos que evalúan tres valores y que retornan un solo valor.
+## 4. Controles de flujo
+## 5. Funciones
+## 6. Métodos para trabajar con datos estructurados:
 Los datos estructurados suelen almacenarse en archivos, por ello es fundamental organizar y acceder correctamente a ellos para realizar operaciones.
 ### Acceder: 
 Obtener la información almacenada dentro de un archivo para leer o consultar datos, puede hacerse mediante lectura secuencial o acceso directo según la estructura del archivo.
