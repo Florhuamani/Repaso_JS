@@ -8,7 +8,8 @@ console.log(negación)
 //operadores binarios
 //Son los que evalúan dos valores y nos dan como resultado un nuevo valor
 let suma=12+12
-console.log(suma)
+console.log(suma)             //Una sentencia es una sola línea que cumple una sola función.
+                              //
 
 //Tarea: Operadores de comparación 
 //Igualdad (==) Verifica la igualdad de dos expresiones sin tener en cuenta el tipo de dato.
@@ -30,13 +31,10 @@ console.log(6<=6.1)
 //Operadores lógicos
 //Se utilizan normalmente con valores booleanos, cuando lo son, devuelven un valor booleano. Sin embargo, los operadores && y || en realidad devuelven el valor de uno de los operandos específicados.
 //Operador AND(&&): Retorna true si ambos operandos son valores verdaderos y false en cualquier otro caso.
-console.log(alert(true && true))
+let verdadero=true && true
+console.log(verdadero)
 //Operador OR(||): Este operador está pensado para manipular solo valores booleanos. Si cualquiera de sus argumentos es true, retorna true, de lo contrario retorna false.
-let hour = 9;
 
-if (hour < 10 || hour > 18) {
-  alert( 'La oficina esta cerrada.' );
-}
 //Operador NOT(!):Acepta un solo argumento y realiza:
 // - Convierte el operando al tipo booleano: *true / false*.
 // - Retorna el valor contrario 
@@ -46,4 +44,13 @@ if (hour < 10 || hour > 18) {
 //sintaxis: "condición ? expr1 : expr2"
 //Condición: Una expresión que se evalua como true o false
 //expr1, expr2: Expresión con valores de algún tipo.
-"La Cuota es de:  " + (isMember ? "$2.00" : "$10.00");
+
+//1. El primer valor debe ser un valor booleano.
+//2. El segundo valor se mostrará si el valor es verdadero.
+//3. El tercer valor se mostrará si el primer valor es falso.
+//let ternario=true?"verdadero":"falso"
+//console.log(ternario)
+
+let edad=19
+let ternario=edad<15?"mayor":"menor"
+console.log(ternario)

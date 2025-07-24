@@ -63,6 +63,15 @@ Su clasificación general se divide en 3:
    1. Operadores ternarios:
    LOs operadores terciarios son aquellos que evalúan tres valores y que retornan un solo valor.
 ## 4. Controles de flujo
+Nuestros programas en JavaScript contiene más de una sentencia y las sentencias son ejecutadas una a una como si fuera una historia, de arriba hacia abajo como un camino recto.
+### Control de decisión(If)
+JavaScript nos permite crear caminos alternativos en nuestros programasdependiendo de una decisión, a esto se le conoce como caminos o ejecución condicional, que ejecutará a una sentencia u otra teniendo en cuenta la condición, así podemos crear múltiples caminos u opciones en nuestros programas.
+Si se tiene una condición verdadera se ejecutará una sentencia, si tenemos una condición false se ejecutará otra sentencia totalmente distinta.
+
+**Observación**
+La ejecución condicional rompe el flujo normal de un programa.
+### Bucle(for)
+### Bucles(While)  
 ## 5. Funciones
 ## 6. Métodos para trabajar con datos estructurados:
 Los datos estructurados suelen almacenarse en archivos, por ello es fundamental organizar y acceder correctamente a ellos para realizar operaciones.
