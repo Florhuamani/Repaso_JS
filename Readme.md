@@ -71,9 +71,88 @@ Si se tiene una condición verdadera se ejecutará una sentencia, si tenemos una
 **Observación**
 La ejecución condicional rompe el flujo normal de un programa.
 ### Bucle(for)
+Crea un bucle que consiste en tres expresiones opcionales, encerradas en paréntesis y separadas por puntos y comas, seguidas de una sentencia ejecutada en un bucle.
+
+Sintaxis
+for ([expresion-inicial]; [condicion]; [expresion-final])sentencia
+
+`expresion-inicial`
+Una expresión (incluyendo las expresiones de asignación) o la declaración de variable. Típicamente se utiliza para usarse como variable contador. Esta expresión puede opcionalmente declarar nuevas variables con la palabra clave var. Estas variables no son locales del bucle, es decir, están en el mismo alcance en el que está el bucle for. El resultado de esta expresión es descartado.
+
+`condicion`
+Una expresión para ser evaluada antes de cada iteración del bucle. Si esta expresión se evalúa como verdadera, se ejecuta sentencia. Esta comprobación condicional es opcional. Si se omite, la condición siempre se evalúa como verdadera. Si la expresión se evalúa como falsa, la ejecución salta a la primera expresión que sigue al constructor de for.
+
+`expresion-final`
+Una expresión para ser evaluada al final de cada iteración del bucle. Esto ocurre antes de la siguiente evaluación de la condicion. Generalmente se usa para actualizar o incrementar la variable contador.
+
+`sentencia`
+Una sentencia que se ejecuta mientras la condición se evalúa como verdadera. Para ejecutar múltiples sentencias dentro del bucle, utilice una sentencia block ({ ... }) para agrupar aquellas sentecias.
 ### Bucles(While)  
+Crea un bucle que ejecuta una sentencia especificada mientras cierta condición se evalue como verdadera. Dicha condición es evaluada antes de ejecutar la sentencia.
+
+Sintaxis
+while (condicion)
+  sentencia
+
+`condición`
+Una expresión que se evalúa antes de cada caso de bucle. Si esta condición se evalúa como true, se ejecuta sentencia. Cuando la condición se evalúa como false, la ejecución continúa con la sentencia posterior al bucle while.
+
+`sentencia`
+Una sentecia que se ejecuta mientras la condición se evalúa como verdadera. Para ejecutar múltiples sentencias dentro de un bucle, utiliza una sentencia block ({ ... }) para agrupar esas sentencias.
+
 ## 5. Funciones
 ## 6. Métodos para trabajar con datos estructurados:
+Los métodos son funciones que dan funcionalidades extras a los tipos de datos, en los cuales se aplica:
+- Un método es antecedido por un tipo de dato y un punto.
+   **Ejemplo**
+   El ejemplo más claro de un método es el `length`, este método nos permite o nos retorna la cantidad de caracteres de un string o la cantidad de elementos de una lista.
+```js
+   "hola".length //4
+   [2,5,4,6,7].length // 5
+```
+>[!TIP]
+Los métodos en su mayoría solo se aplican a tipo de datos string, listas y objetos, en su gran parte son aplicados para listas.
+
+### 6.1. Métodos para string - cadenas de texto
+#### - length: 
+Devuelve la logitud de una cadena.
+```js
+let mensaje="hola cómo estás"
+console.log(mensaje.length())
+//retorna =>15
+```
+#### toLowerCase:
+devuelve una cadena en minúsculas.
+```js
+let texto="HOLA"
+console.log(texto.toLowerCase())
+//retorna ->"hola"
+```
+
+#### toUpperCase:
+devuelve una cadena en mayúsculas.
+```js
+let texto="hola"
+console.log(texto.toUpperCase())
+//retorna ->"HOLA"
+```
+
+#### concat:
+Combina el texto de dós o más cadenas.
+```js
+let nombre="Kcapa"
+let saludo="Hola"
+//let concatenado=saludo+nombre
+let cad1="Hoy"
+let cad2="es"
+let cad3="jueves"
+console.log(cad1.concat(cad2,cad3))
+//retorna -> Hoy es jueves
+```
+### 6.1. Métodos para listas - arrays
+
+
+
 Los datos estructurados suelen almacenarse en archivos, por ello es fundamental organizar y acceder correctamente a ellos para realizar operaciones.
 ### Acceder: 
 Obtener la información almacenada dentro de un archivo para leer o consultar datos, puede hacerse mediante lectura secuencial o acceso directo según la estructura del archivo.

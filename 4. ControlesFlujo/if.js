@@ -30,4 +30,51 @@ if (firstNumber>secondNumber){
     
 }
 
-//Crear un programa que me muestre el númerp en texto
+
+//Crear un programa que me muestre el número en texto
+
+//forma del profe
+let numero=2
+if (numero==1){
+    console.log("uno")
+}
+else if (numero==2){ //if anidado = else if.  cada linea de else if es evaluada por la computadora
+    console.log("dos")
+}
+else if (numero==3){
+    console.log("tres")
+}
+else if (numero==4){
+    console.log("cuatro")
+}
+else if (numero==5){
+    console.log("cinco")
+}
+
+
+switch (numero) { //usa menos poder computacional
+    case 1:
+        console.log("uno")
+        break //cada que uso CASE y SWITCH se debe romper la cache ya que el switch almacena en cache
+    case 2:
+        console.log("dos")
+        break
+    case 2:
+        console.log("dos")
+        break
+    default: // DEFAUL: es como un else. pero usa menos cpu
+        console.log("fuera de rango")
+        break
+}
+
+
+// // en caso de que no se cumpla la condicion, IF permite permite agregar una condicion
+// // ELSE que incluye un bloque de codigo que se ejecuta al no cumplirse la primera condicion
+// // no puede haber un ELSE sin compañia del IF
+// var aprobe = true;
+// if (aprobe == true) {
+//     console.log("de vacaciones 😆!!!")
+// }
+// else {
+//     console.log("a recuperacion 😢")
+// };
