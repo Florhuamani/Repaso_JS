@@ -149,6 +149,36 @@ let cad3="jueves"
 console.log(cad1.concat(cad2,cad3))
 //retorna -> Hoy es jueves
 ```
+
+#### trim:
+Este método elimina los espacios que existen al inicio o final de una cadena o texto.
+```js
+let texto="  hola"
+let nuevoTexto=texto.trim()  //hola
+let otroTexto="hola    "
+let nuevoOtroTexto=otroTexto.trim() //hola
+```
+
+#### slice: 
+Este método nos permite extraer partes de una cadena, especificando sus índices, donde comenzar y hasta dónde mostrar.
+```js
+let párrafo=" Hola, soy Percy"  //Solo se quiere mostrar el nombre
+let nombre=párrafo.slice(9) //Percy
+let soy=párrafo.slice(5,8) 
+```
+
+#### split:
+Este método retorna una lista basándose en un separador que se le indique.
+```js
+let párrafo=" Solo sé que nada sé"
+párrafo.split(" ") //["solo","sé"."que"."nada"."sé"]
+let url="google.com/search?=gatitos"
+let gatito=url.split("=") //["google.com/search?"."gatitos"]
+console.log(gatito[1]) //gatitos
+let listaFrutas="manzanas,naranja,pera,fresa"
+listaFrutas.split(",")
+```
+
 ### 6.1. Métodos para listas - arrays
 
 
