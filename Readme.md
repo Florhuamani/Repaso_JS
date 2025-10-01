@@ -181,6 +181,129 @@ listaFrutas.split(",")
 
 ### 6.1. Métodos para listas - arrays
 
+#### Crear una lista
+```js
+let lista=[]
+```
+
+#### Agregando elementos a una lista:
+```js
+lista[0]="manzana"
+```
+#### push:
+El método `push` agrega elementos al final de una lista.
+```js
+let lista=[]
+lista.push=("manzana")
+```
+#### unshift;
+El método `unshift` agrega elementos al inicio de una lista
+```js
+let amigos=['Ronny','Lisbet']
+amigos.unshift('Ronal')
+```
+#### Remover elementos de una lista: 
+#### Pop:
+El método `pop` al contrario de push, extrae el útimo elemento de una lista.
+
+#### shift:
+El método `shift` al contrario de unshift extrae el primer elemento de la lista.
+
+#### Eliminar elementos de una lista:
+#### delete:
+Elimina un elemento en base a su índice.
+```js
+let texto=["Es","una","","oración"]
+delete texto[2]
+```
+#### splice:
+Este método elimina el elemento en base a su índice y a la cantidad de elementos a eliminar.
+```js
+let vocales=['a','e','i','o','u']
+vocales.splice(2,1)
+```
+
+#### Combinando y uniendo listas(arrays)
+#### concat:
+Este método crea un nuevo array que contienen los elementos del array original seguido por los elementos de uno o más arrays proporcionados.
+```js
+let amigoPrimaria=['amigo1','amigo2','amigo3','amigo4']
+let amigoSecundaria=['amigo5''amigo6']
+let amigoSuperior=['amigo7''amigo8']
+```
+
+
+#### Métodos para iterar elementos:
+#### forEach:
+Este método ejecuta una función anónima por cada elemento.
+```js
+let numeros=[1,2,3,4,5,6]
+numeros.forEach(n=>{console.log(n+1)})
+```
+#### map:
+Este método ejecuta una función anónima por cada elemento de un array, generando una nueva lista
+```js
+let numeros=[1,2,3,4,5,6]
+numeros.map(n=>{})
+```
+
+#### Métodos para buscar elementos en una lista:
+#### includes:
+Este método busca un valor específico y devuelve un valor buscado, retorna true, caso contrario false.
+```js
+let vocales=['a','i','o','u']
+let buscaE=vocales.includes('e')
+//retorna false
+let buscaA=vocales.includes('a')
+//retorna true
+```
+
+#### filter:
+Este método se usa para encontrar elementoa dentro de una lista que cierta condición.
+```js
+let numeros=[3,5,84,2,4,24,1,0]
+//Deseo una lista con los numeros que sean menor de 4
+let nuevoNumero=numeros.filter(n=>{n<4})
+```
+
+#### find:
+Este método se utiliza para encontrar el primer elemento que cumpla con cierta condición, a diferencia del `filter` solo retorna un elemento el que coincida con la condición.
+```js
+let lisNumeros=[10,13,15,17]
+//Devolver el número menor de 10
+let menorDiez=lisNumeros.find(n=>{return n>10})
+console.log(menorDiez)
+```
+
+### 6.2 Métodos para objetos
+#### Creando un objeto:
+```js
+//objeto o diccionario vacío
+let objeto=[]
+```
+
+#### Agregando elementos a un objeto:
+Recuerden que el elemento de un objeto está conformado por `clave;valor`.
+```js
+objeto["nombre"]="ruth"
+objeto["edad"]=19
+objeto[CUI]=92849202
+```
+
+#### Actualizando elementos de nuestro objeto:
+Para realizar la actualización del valor de un elemento tenemos que acceder a travez de su clave y asignarle el nuevo valor.
+
+**Observación:**
+La clave debe de ser la misma a actualizar de no existir, se crea uno nuevo.
+```js
+objeto["edad"]=19
+```
+
+#### Eliminando un elemento de nuestro objeto:
+Para eleiminar el elemento de un objeto, hacemos uso de un operador unario `delete`.
+```js
+delete objeto.CUI
+```
 
 
 Los datos estructurados suelen almacenarse en archivos, por ello es fundamental organizar y acceder correctamente a ellos para realizar operaciones.
