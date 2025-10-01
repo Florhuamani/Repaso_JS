@@ -63,3 +63,30 @@ amigo.find(el=>{el=="amigo3"})
 let numeros=[1,2,3,4,5,6,7,8,9,0]
 let numeroMenor=numeros.filter(num=>num<=6)
 numeroMenor
+
+const miFuncion=a=>{}
+let numero=[1,2,3,4,5,6]
+numero.forEach(n=>{console.log(n+1)})
+
+let number=[1,2,3,4,5,6]
+let newNumber=number.map(n=>{return n+1})
+console.log(newNumber)
+
+let vocal=['a','i','o','u']
+let buscaE=vocal.includes('e')
+console.log(buscaE)
+
+let numbers=[3,5,84,2,4,24,1,0]
+//Deseo una lista con los numeros que sean menor de 4
+let nuevoNumero=numbers.filter(n=>{return n<10})
+console.log(nuevoNumero)
+
+//De una lista número del 1 al 10 usando filter eliminar el número 1.
+let listaNumeros=[1,2,3,4,5,6,7,8,9,10]
+listaSinUNo=listaNumeros.filter(n=>{return n!=1})
+console.log(listaSinUNo)
+
+let lisNumeros=[10,13,15,17]
+//Devolver el número menor de 10
+let menorDiez=lisNumeros.find(n=>{return n>10})
+console.log(menorDiez)
