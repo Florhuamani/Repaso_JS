@@ -1,19 +1,24 @@
 //Crear una lista de objetos de 5 vehículos que tengan información  como marca, modelo,año de fabricación, precio, número de placa.
-let listaVehículos=[
-    {"marca":"toyota","modelo":"nova s","año de fabricación":"2021","precio":36000,"numero de placa":"763-yh"},
-    {"marca":"Nissan","modelo":"voyager x","año de fabricación":"2019","precio":31400,"numero de placa":"hj-344"},
-    {"marca":"Kya","modelo":"Bolt","año de fabricación":"2018","precio":14000,"numero de placa":"983-rr"},
-    {"marca":"Chevrolet","modelo":"Explorer","año de fabricación":"2025","precio":76000,"numero de placa":"673-3f"},
-    {"marca":"Hyundai","modelo":"Horizon","año de fabricación":"2022","precio":72000,"numero de placa":"6378-dhj"}
+let listaVehiculos=[
+    {"marca":"toyota","modelo":"nova s","añofabricación":"2021","precio":36000,"numeroplaca":"763"},
+    {"marca":"Nissan","modelo":"voyager x","año de fabricación":"2019","precio":31400,"numeroplaca":"344"},
+    {"marca":"Kya","modelo":"Bolt","añofabricación":"2018","precio":14000,"numeroplaca":"983"},
+    {"marca":"Chevrolet","modelo":"Explorer","añofabricación":"2025","precio":76000,"numeroplaca":"673"},
+    {"marca":"Hyundai","modelo":"Horizon","añofabricación":"2022","precio":72000,"numeroplaca":"6378"}
 ]
 //Crear funciones para cada uno de estas acciones.
 //Actualizar el valor de una de sus caracteristicas.
-
+const actualizar=listaVehiculos.map(el=>{el["numeroplaca"]=983
+    return el
+})
+console.log(actualizar)
 //Agregar un nuevo vehículo.
-let nuevaLista=listaVehículos.map(el=>{return el["marca"]="ferrari",["modelo"]})
-console.log(listaVehículos)
-//Eliminar un vehiculo
-
+let añadirVehiculo={"marca":"ferrari","modelo":"abcd","añofabricación":"2025","precio":16700,"numeroplaca":234}
+console.log(añadirVehiculo)
 //Poder filtrar los vehículos por su año de fabricación.
+let añoFabricación=listaVehiculos.filter(listaVehiculos=>listaVehiculos.añofabricación<2022)
+console.log(añoFabricación)
 
-//Poder filtrar un solo vehículopor su número de placa.
+//Poder filtrar un solo vehículo por su número de placa.
+let filtrarVehiculo=listaVehiculos.filter(listaVehiculos=>listaVehiculos.numeroplaca===983)
+console.log(filtrarVehiculo)
