@@ -332,3 +332,84 @@ Hay varios tipos principales de scope:
 `var` y `let`:
 - *var* tiene scope de función: La variable existe a lo largo de toda la función que lo contiene.
 - *let* tiene scope de bloque: La variable solo existe dentro del bloque `{}` donde fue declarada, lo que ayuda a evitar errores por redefiniciones o accesos inoportunos.
+
+## 7. es6
+### Arrow function
+### Destructuring:
+Esta es una técnica para el desempaquetado de listas u objetos en variables, esta técnica facilita el acceso a los elementos de una lista u objeto.
+```js
+let alumno={
+   "nombre":"Miguel",
+   "edad":"17"
+}
+console.log(alumnpo.nombre)
+//desetructuración
+```
+
+## DOM (Document Objet Model):
+- Según sus siglas es Modelo de Objeto de Documento.
+- Pa ra la web es una API del navegador, eso significa que nos proporciona una interfaz para comunicarnos entre HTML y JavaScript .
+- Según su funcionalidad DOM es el encargado de convertir documentos `html` y `css` en objetos de `JavaScript` o en un árbol de objetos.
+- Para `JavaScript` el `DOM` es un objeto con el que podemos leer y modificar a nuestro antojo.
+  
+La manera en como `DOM` nos permite interactuar con nuestros documentos `html` y `css` son a través de `selectores`.
+
+### Selectores:
+Es la manera de como podremos manipular el `DOM`, este es el primer paso que debemos dominar para realizar operaciones de lectura o modificaciones,
+
+#### Captura de elementos:
+##### Selectores Tradicionales
+Estos selectores son métodos del documento, porque `DOM` trabaja con el documento.
+
+```js
+//--selesctores por id:
+document.getElementById("mi_div")
+//<section id=mi_div></section>
+//--Selectores por atributo_name:
+//<input name="dni" value="323">
+//dni="323"
+document.getByName("dni")
+//todos los elementos
+//--Selectores por su etiqueta tag
+//<h1></h1>
+document.getElementTagName("h1")
+//-- Selectores por su clase:
+//<div class=rojo></div>
+document.getElementByClassName("rojo")
+```
+  
+  >[!tip]
+  En la programación web `DAW` se hace el uso de dos técnicas, 1. Obtención de datos (get), 2. Creación de Datos (set), Setter and getter.  
+
+##### Selectores Modernos oAvanzados:
+```js
+//Para la captura de un elemento ó el primer elemento que coincida con la búsqueda
+document.querySelector()
+//Busca y obtiene el elemento que coincida con el nombre de la clase.
+documnet.querySelector("nombre_clase")
+//Busca y obtiene el elemento que coincida con el nombre de la id.
+document.querySelector("nombre_id")
+//Busca y obtienen el elemento que coincida con el nombre de la etiqueta
+document.querySelector("p")
+document.querySelector(".input[name=""id]")
+
+//Para acceder a todas las coincidencias.
+//Esto retorna un array con todas las coincidencias.
+document.querySelectorAll("nombre_clase")
+```
+#### Acceder a contenido y Actualizar contenido:
+Una vex capturada elemento con `querySelector` pueden hacer uso de `textContent` para acceder al contenido del elemento, de esta misma forma podemos editaro actualizar el conyenido  ` textContent="hola"` esto es lo que actualiza el contenuido anterior con el contenido que se le está asignando.
+`textContent` solo se usa si deseamos agrgar contenido de tipo texto, si deseamos setear o agrgar contenido de tipo `html` se deberá usar `innerhtml`.
+```js
+//<p id="text"> Este es un contenido</p>
+let etiquetaP=document.querySelector("#text")
+console.log(etiquetaP,textContent)
+//Este es un contenido
+etiquetaP.textContent="nuevo texto"
+console.log(etiquetap.textContent)
+//nuevo texto
+
+//<div id="contenedor"></div>
+let div=document.querySelector("#contenedor")
+div.innerHTML="<p> este es un párrafo</p>"
+``` 

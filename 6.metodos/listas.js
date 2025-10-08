@@ -90,3 +90,10 @@ let lisNumeros=[10,13,15,17]
 //Devolver el número menor de 10
 let menorDiez=lisNumeros.find(n=>{return n>10})
 console.log(menorDiez)
+
+let alumno={
+    "nombre":"Miguel",
+    "edad":"17"
+ }
+ console.log(alumno.nombre)
+ 
