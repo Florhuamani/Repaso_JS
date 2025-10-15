@@ -482,3 +482,103 @@ section.style.backgroundColor="red"
 ```
 
 ### Eventos(tarea-Averiguar)
+Los eventos son sucesos o acciones que ocurren en un momento temporal en JS, DOM y en nuestro navegador. Cuando abrimos una página web y el usuario interactúa con la web se produce estos eventos.
+Estos ocurren sobre elementos `html` o elementos del `DOM`, estos eventos son lo que le da vida a la página web, realizar acciones cuando el usuario interactúe con ella.
+
+- Listeners: Es una función que nos permite escuchar un evento y ejecutar código cuando ese evento ocurra, el código que se ejecuta se llama `handler`.
+Es decir, listener es el que escucha y handler es el que ejecuta una función cuando ocurre ese evento.
+   - Primera manera(no recomendado): Atributo html
+       ```html
+       <button onclick="alert(`hola`)">Click aquí</button>
+       ```
+   - Segunda manera: Propiedad del DOM
+      ```js
+      const button =document.querySelector(`button`);
+      button.onclick =function(){
+         alert(`hola desde javascript`);
+      }
+      ```
+   - Tercera manera: addEventListener (Recomnedado)
+      ```js
+      button.addEventListener(`click`, function(){
+         alert(`hola con addEventListener`);
+      });
+      ```
+
+addEventListener nos permite más control sobre la propagación, mejor organización del código, puede removerse fácilmente y permite múltiples funciones para el mismo evento.
+
+- DOMContentLoaded:
+Es un evento que se dispara cuando el HTML está completamente cargado, sin esperar imágenes ni recursos externos.
+```js
+document.addEventListener('DOMContentLoaded', function() {
+    // Aquí el DOM está listo y seguro para manipular
+    const button = document.getElementById('miBoton');
+    button.addEventListener('click', function() {
+        alert('¡Todo funciona correctamente!');
+    });
+});
+```
+ Debería de ser usado porque evita errores al amnipular elementos que aún no existen y garnatiza que el código se ejecute en el momento correcto.
+
+- Evento Submit en Formularios:
+Se dispara cuando un formulario es enviado, permitiendo validar datos antes del envío.
+```js
+const form = document.getElementById('miFormulario');
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Detiene el envío normal
+    
+    // Validación personalizada
+    const email = document.getElementById('email').value;
+    if (!email.includes('@')) {
+        alert('Email inválido');
+        return;
+    }
+    
+    // Si todo está bien, procesar el formulario
+    console.log('Formulario válido, enviando datos...');
+});
+```
+
+---
+
+- Eliminar Comportamiento Nativo:
+   - preventDefault(): Detiene la acción por defecto del navegador:
+```js
+// Evitar que un link navegue
+link.addEventListener('click', function(event) {
+    event.preventDefault();
+    console.log('Link clickeado pero no navega');
+});
+
+// Evitar envío de formulario tradicional
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Manejar envío manualmente
+});
+```
+
+   - stopPropagation(): Evita que el evento se propague a elementos padres:
+```js
+childElement.addEventListener('click', function(event) {
+    event.stopPropagation();
+    console.log('Solo este elemento maneja el evento');
+});
+```
+
+- El Objeto Event: Cuando ocurre un evento, automáticamente se pasa un objeto con información:
+
+```js
+elemento.addEventListener('click', function(event) {
+    console.log('Tipo de evento:', event.type);
+    console.log('Elemento que lo disparó:', event.target);
+    console.log('Coordenadas X:', event.clientX);
+    console.log('Coordenadas Y:', event.clientY);
+});
+```
+
+- Tipos de Eventos Comunes:
+· Mouse: click, dblclick, mouseover, mouseout
+· Teclado: keydown, keyup, keypress
+· Formularios: submit, change, focus, blur
+· Ventana: load, resize, scroll
+
