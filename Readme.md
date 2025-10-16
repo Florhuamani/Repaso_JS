@@ -582,3 +582,32 @@ elemento.addEventListener('click', function(event) {
 · Formularios: submit, change, focus, blur
 · Ventana: load, resize, scroll
 
+Existen situaciones en las que necesitamos realizar una acción **cuándo ocurra un determinado caso**, esto se puede trabajar con una `estructura de decisión` o puedo trabajar con una `estructura de repetición`.
+Esto se puede manejar de esta manera cuándo sabemos que es lo que tiene que suceder. Existen situaciones en las que no sabemos exactamente cuando tenemos que activar nuestra funcionalidad.
+Por ejemplo, no podemos predecir **cuando** un usuario de nuestra página hará click en un botón, o en que momento reproducirá una canción o lo pausará, es esta situación es cuando tenemos que manejar la funcionalidad a través de **eventos**.
+
+#### ¿Qué es un evento?
+Es una notificación de una característica que acaba de suceder o la ejecución de una funcionalidad.
+- Evento `Click`: 
+- Evento `keydown`: Pulsamos una tecla
+- Evento `play`:
+- Evento `wheel`: Scroll en la rueda del ratón.
+- Evento `beforeprint`: Cuando el usuario activa la opción de imprimir, aparece un cuadro de diálogo.
+  
+![alt text](image.png)
+  
+**Tenenmos dos maneras de manejar los eventos:**
+### 1. Eventos desde HTML:
+Podemos escuchar los eventos a trave de atributos de un elemento html.
+**index html**
+```html
+<button onclick="alert(`hola`)">Saludar</button>
+```
+
+### 2. Eventos desde JavaScript:
+La opción **recomendada** manejar los elementos desdeficheros (archivo) `.js`.
+Esto evita tener nombres sueltos de funciones en HTML, que luego tendremos que actualizar y mantener.
+
+#### Captura evento, método addEventListener:
+Este método recibe dos parámetros, el evento y la función a ejecutar.
+Para conocimientovel método `addEventListener (event, func)` es una función que se comporta como una función de tipo `callback`.
